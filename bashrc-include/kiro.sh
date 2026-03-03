@@ -1,3 +1,3 @@
 KIROCLI_BIN_DIR=~/kirocli
 
-export PATH='${PATH}:'"${KIROCLI_BIN_DIR}"
+export PATH="${PATH}:${KIROCLI_BIN_DIR}"

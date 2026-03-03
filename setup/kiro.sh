@@ -1,5 +1,5 @@
 #!/bin/bash
-set -ex
+set -e
 
 KIROCLI_BIN_DIR=~/kirocli
 KIROCLI_DATA_DIR=~/kirocli-data
@@ -14,6 +14,4 @@ fi
 if [ ! -d "${KIROCLI_DATA_TARGET_DIR}" ]; then
     mkdir -p ~/.local/share
     ln -s "${KIROCLI_DATA_DIR}" "${KIROCLI_DATA_TARGET_DIR}"
-    echo "✅ Kiro set up successfully!"
 fi
-
