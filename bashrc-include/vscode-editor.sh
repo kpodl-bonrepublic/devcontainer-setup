@@ -1,5 +1,4 @@
 # Use latest created IPC socket
-set -x
 _latest_ipc_socket=$(ls -t /tmp/vscode-ipc-* | head -1)
 
 if [ -n "${_latest_ipc_socket}" -a ! -v VSCODE_IPC_HOOK_CLI ]; then
@@ -13,4 +12,3 @@ if [ -n "${_latest_ipc_socket}" -a ! -v VSCODE_IPC_HOOK_CLI ]; then
 fi
 
 unset _latest_ipc_socket
-set +x
