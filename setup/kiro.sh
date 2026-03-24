@@ -8,9 +8,5 @@ KIROCLI_DATA_TARGET_DIR=~/.local/share/kiro-cli
 
 . $(dirname ${0})/common.sh
 
-if [ ! -d "${KIROCLI_BIN_DIR}" -o ! -d "${KIROCLI_DATA_DIR}" ]; then
-    echo "Expected directories ${KIROCLI_BIN_DIR} and ${KIROCLI_DATA_DIR} do not exist!" 1>&2
-    exit 1 
-fi
-
+ensure_directories_exists "${KIROCLI_BIN_DIR}" "${KIROCLI_DATA_DIR}"
 setup_link "${KIROCLI_DATA_DIR}" "${KIROCLI_DATA_TARGET_DIR}"

@@ -8,3 +8,16 @@ function setup_link() {
         ln -s "${SOURCE_DIR}" "${TARGET_DIR}"
     fi
 }
+
+function ensure_directories_exists() {
+    local missing=()
+    for dir in "$@"; do
+        if [ ! -d "${dir}" ]; then
+            missing+=("${dir}")
+        fi
+    done
+    if [ ${#missing[@]} -gt 0 ]; then
+        echo "Expected directories ${missing[*]} but they don't exist" >&2
+        exit 1
+    fi
+}
