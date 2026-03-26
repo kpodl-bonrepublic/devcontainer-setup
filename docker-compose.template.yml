@@ -13,6 +13,11 @@ services:
       - ~/.config/kilo:/home/myuser/kilo/config
       - ~/.local/state/kilo/:/home/myuser/kilo/state
       - ~/.local/share/kilo:/home/myuser/kilo/share
+      # Opencode
+      - ~/.opencode:/home/myuser/.opencode
+      - ~/.config/opencode:/home/myuser/opencode/config
+      - ~/.local/state/opencode/:/home/myuser/opencode/state
+      - ~/.local/share/opencode:/home/myuser/opencode/share
       # Atuin
       - ~/.atuin:/home/myuser/.atuin
       - ~/.config/atuin:/home/myuser/atuin/config
