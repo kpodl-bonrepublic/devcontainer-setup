@@ -1,5 +1,5 @@
 #!/bin/bash
-set -ex
+set -e
 OPENCODE_CONFIG_DIR=~/opencode/config
 TARGET_OPENCODE_CONFIG_DIR=~/.config/opencode
 OPENCODE_STATE_DIR=~/opencode/state

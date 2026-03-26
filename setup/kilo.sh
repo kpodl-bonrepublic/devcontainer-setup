@@ -1,5 +1,5 @@
 #!/bin/bash
-set -ex
+set -e
 KILO_CONFIG_DIR=~/kilo/config
 TARGET_KILO_CONFIG_DIR=~/.config/kilo
 KILO_STATE_DIR=~/kilo/state

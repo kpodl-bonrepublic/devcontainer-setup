@@ -1,5 +1,5 @@
 #!/bin/bash
-set -ex
+set -e
 ATUIN_BIN_DIR=~/.atuin
 ATUIN_CONFIG_DIR=~/atuin/config
 ATUIN_CONFIG_TARGET_DIR=~/.config/atuin
