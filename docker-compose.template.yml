@@ -2,17 +2,17 @@ services:
   # Update this to the name of the service you want to work with in your docker-compose.yml file
   backend:
     volumes:
-      # required for signing git commits (we need to include `known_hosts` as `~.ssh` is not writable
-      # as soon as we mount files)
-      - ~/.ssh/known_hosts:/home/myuser/.ssh/known_hosts
-      - ~/.ssh/allowed_signers:/home/myuser/.ssh/allowed_signers
-      - ~/.ssh/git_signing.pub:/home/myuser/.ssh/git_signing.pub
       # Container setup
       - ~/dev/devcontainer-setup/:/home/myuser/devcontainer-setup
       # Kiro
       - ~/.kiro:/home/myuser/.kiro
       - ~/install/kirocli/:/home/myuser/kirocli
       - ~/.local/share/kiro-cli/:/home/myuser/kirocli-data
+      # Kilocode CLI
+      - ~/.kilo:/home/myuser/.kilo
+      - ~/.config/kilo:/home/myuser/kilo/config
+      - ~/.local/state/kilo/:/home/myuser/kilo/state
+      - ~/.local/share/kilo:/home/myuser/kilo/share
       # Atuin
       - ~/.atuin:/home/myuser/.atuin
       - ~/.config/atuin:/home/myuser/atuin/config
