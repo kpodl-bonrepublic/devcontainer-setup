@@ -1,5 +1,5 @@
 # Use latest created IPC socket
-_latest_ipc_socket=$(ls -t /tmp/vscode-ipc-* | head -1)
+_latest_ipc_socket=$(ls -t /tmp/vscode-ipc-* /tmp/user/${UID}/vscode-ipc-* | head -1)
 
 if [ -n "${_latest_ipc_socket}" -a ! -v VSCODE_IPC_HOOK_CLI ]; then
     _latest_vscode_dir=$(find -L ~/.vscode-server/bin/ -maxdepth 1 -mindepth 1 -type d | xargs ls -dt)
